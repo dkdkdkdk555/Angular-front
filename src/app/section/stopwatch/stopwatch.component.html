@@ -1,6 +1,14 @@
 <div>
-    <app-time-display></app-time-display>
-
+    <div>
+        <app-time-display></app-time-display>
+    </div>      
     <a href="" [routerLink] = "'/clock'">시계로 이동</a>
-    
+    <button (click)="goClock()">
+        시계로 이동
+    </button>
+
+    <button (click)="pageToggleService.plusCount()">
+        숫자확인 테스트
+    </button>
+
 </div>

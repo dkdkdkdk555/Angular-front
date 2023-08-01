@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
+import { PageToggleService } from 'src/app/share/page-toggle.service';
 
 @Component({
   selector: 'app-time-display',
@@ -15,12 +16,15 @@ export class TimeDisplayComponent implements OnInit{
 
   timeInterval:any;
 
+
   ngOnInit(): void {
     
   }
 
+
   timeStart() {
-    this.timeStop();
+
+    this.timeStop(); // 기존 인터벌 객체 없엠
     this.timeInterval = setInterval(() => {
       if (this.ms >= 100) {
         this.ms = 0;

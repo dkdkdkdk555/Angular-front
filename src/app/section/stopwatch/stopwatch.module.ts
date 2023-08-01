@@ -4,6 +4,7 @@ import { TimeDisplayComponent } from './time-display/time-display.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { StopwatchComponent } from './stopwatch.component';
 import { RouterModule } from '@angular/router';
+import { PageToggleService } from 'src/app/share/page-toggle.service';
 
 
 
@@ -16,10 +17,12 @@ import { RouterModule } from '@angular/router';
   exports:[
     StopwatchComponent
   ],
-
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule // stopwatch에서 -> clock으로 경로 이동하려면 추가해야함
+  ],
+  providers: [
+    PageToggleService
   ]
 })
 export class StopwatchModule { }
